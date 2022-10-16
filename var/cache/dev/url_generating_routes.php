@@ -20,4 +20,8 @@ return [
     'ingredient.new' => [[], ['_controller' => 'App\\Controller\\IngredientController::new'], [], [['text', '/ingredient/nouveau']], [], [], []],
     'ingredient.edit' => [['id'], ['_controller' => 'App\\Controller\\IngredientController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/ingredient/edition']], [], [], []],
     'ingredient.delete' => [['id'], ['_controller' => 'App\\Controller\\IngredientController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/ingredient/suppression']], [], [], []],
+    'menu.index' => [[], ['_controller' => 'App\\Controller\\MenuController::index'], [], [['text', '/menu']], [], [], []],
+    'menu.new' => [[], ['_controller' => 'App\\Controller\\MenuController::new'], [], [['text', '/menu/creation']], [], [], []],
+    'menu.edit' => [['id'], ['_controller' => 'App\\Controller\\MenuController::edit'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/menu/edition']], [], [], []],
+    'menu.delete' => [['id'], ['_controller' => 'App\\Controller\\MenuController::delete'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/menu/suppression']], [], [], []],
 ];
