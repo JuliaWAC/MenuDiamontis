@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Bistrot - Menu{% endblock %}
+{% block title %}Bistrot - Plat{% endblock %}
 
 {% block body %}
     <div class='container mt-4'>
         {% if not menus.items is same as ([]) %}
-        <h1>Menu</h1>
+        <h1>Plats</h1>
 
             <a href="{{ path('menu.new') }}" class="btn btn-primary mb-3 mt-4">Ajouter une recette</a>
 
@@ -16,10 +16,21 @@
                 {% endfor %}
 
             <div class='count mt-4'>
-                <h4>Il y a {{ menus.getTotalItemCount }} recettes au total.</h4>
+                <h4>Il y a {{ menus.getTotalItemCount }} plats au total.</h4>
             </div>
 
-        <table class="table mt-4">
+            {% for menu in menus %}
+                <div class="card text-center mt-5">
+                    <div class="card-header">{{menu.id}}</div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{menu.name}}</h5>
+                        <p class="card-text">{{menu.price}}</p>
+                        <p class="card-text">{{menu.description}}</p>
+                    </div>
+                    <div class="card-footer text-muted">{{ menu.createdAt|date('d/m/Y') }}</div>
+                </div>
+            {% endfor %}
+        {# <table class="table mt-4">
             <thead>
                 <tr>
                 <th scope="col">Numéro</th>
@@ -48,7 +59,7 @@
                         </tr>
                     {% endfor %}
             </tbody>
-        </table>
+        </table> #}
         <div class="navigation d-flex justify-content-center mt-4">
             {{ knp_pagination_render(menus) }}
         </div>

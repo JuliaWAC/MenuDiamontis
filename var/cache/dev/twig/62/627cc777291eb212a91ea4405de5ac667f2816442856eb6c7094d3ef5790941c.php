@@ -58,21 +58,21 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
         // line 8
         echo "        ";
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 12
+        // line 14
         echo "
         ";
-        // line 13
+        // line 15
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 16
+        // line 18
         echo "    </head>
     <body>
         ";
-        // line 18
+        // line 20
         $this->displayBlock('header', $context, $blocks);
-        // line 21
+        // line 23
         echo "        ";
         $this->displayBlock('body', $context, $blocks);
-        // line 22
+        // line 24
         echo "    </body>
 </html>
 ";
@@ -117,7 +117,9 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_link_tags')->getCallable()("app"), "html", null, true);
         echo "
-            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/journal/bootstrap.min.css\">
+\t\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/journal/_variables.scss\">
+\t\t\t<link rel=\"stylesheet\" href=\"/style.css\">
         ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -127,7 +129,7 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
 
     }
 
-    // line 13
+    // line 15
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -137,7 +139,7 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 14
+        // line 16
         echo "            ";
         echo twig_escape_filter($this->env, $this->env->getFunction('encore_entry_script_tags')->getCallable()("app"), "html", null, true);
         echo "
@@ -150,7 +152,7 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
 
     }
 
-    // line 18
+    // line 20
     public function block_header($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -160,10 +162,10 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
-        // line 19
+        // line 21
         echo "            ";
-        $this->loadTemplate("partials/_header.html.twig", "base.html.twig", 19)->display($context);
-        // line 20
+        $this->loadTemplate("partials/_header.html.twig", "base.html.twig", 21)->display($context);
+        // line 22
         echo "        ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -173,7 +175,7 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
 
     }
 
-    // line 21
+    // line 23
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -198,7 +200,7 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
 
     public function getDebugInfo()
     {
-        return array (  177 => 21,  167 => 20,  164 => 19,  154 => 18,  141 => 14,  131 => 13,  117 => 9,  107 => 8,  88 => 5,  76 => 22,  73 => 21,  71 => 18,  67 => 16,  65 => 13,  62 => 12,  59 => 8,  54 => 5,  48 => 1,);
+        return array (  179 => 23,  169 => 22,  166 => 21,  156 => 20,  143 => 16,  133 => 15,  117 => 9,  107 => 8,  88 => 5,  76 => 24,  73 => 23,  71 => 20,  67 => 18,  65 => 15,  62 => 14,  59 => 8,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -212,7 +214,9 @@ class __TwigTemplate_d48f6a6c65326186f133f4f9c92f4413b547139191cbe001cbe0ff08d77
         {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
         {% block stylesheets %}
             {{ encore_entry_link_tags('app') }}
-            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">
+            <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/journal/bootstrap.min.css\">
+\t\t\t<link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/bootswatch@5.1.3/dist/journal/_variables.scss\">
+\t\t\t<link rel=\"stylesheet\" href=\"/style.css\">
         {% endblock %}
 
         {% block javascripts %}

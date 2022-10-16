@@ -40,7 +40,7 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "partials/_header.html.twig"));
 
         // line 1
-        echo "<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        echo "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
   <a class=\"navbar-brand\" href=\"#\">Bistrot</a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
@@ -49,19 +49,22 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"#\">Accueil <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"";
+        // line 10
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home.index");
+        echo "\">Accueil</a>
       </li>
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"";
         // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("menu.index");
-        echo "\">Menu <span class=\"sr-only\">(current)</span></a>
+        echo "\">Menu</a>
       </li>
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"";
         // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ingredient.index");
-        echo "\">Ingrédients <span class=\"sr-only\">(current)</span></a>
+        echo "\">Ingrédients</a>
       </li>
     </ul>
   </div>
@@ -86,12 +89,12 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
 
     public function getDebugInfo()
     {
-        return array (  63 => 16,  57 => 13,  43 => 1,);
+        return array (  66 => 16,  60 => 13,  54 => 10,  43 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<nav class=\"navbar navbar-expand-lg navbar-light bg-light\">
+        return new Source("<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">
   <a class=\"navbar-brand\" href=\"#\">Bistrot</a>
   <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
     <span class=\"navbar-toggler-icon\"></span>
@@ -100,13 +103,13 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
   <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"#\">Accueil <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"{{path('home.index') }}\">Accueil</a>
       </li>
       <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"{{ path('menu.index') }}\">Menu <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"{{ path('menu.index') }}\">Menu</a>
       </li>
       <li class=\"nav-item active\">
-        <a class=\"nav-link\" href=\"{{ path('ingredient.index') }}\">Ingrédients <span class=\"sr-only\">(current)</span></a>
+        <a class=\"nav-link\" href=\"{{ path('ingredient.index') }}\">Ingrédients</a>
       </li>
     </ul>
   </div>

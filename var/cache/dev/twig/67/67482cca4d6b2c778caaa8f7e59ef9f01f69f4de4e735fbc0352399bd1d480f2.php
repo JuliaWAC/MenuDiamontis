@@ -87,14 +87,12 @@ class __TwigTemplate_a36ee51e1841fb58ff6d98cbea9a2e15db496be7dda351f2da5ba190d15
 
         // line 7
         echo "    <div class='container mt-4'>
-        <div class=\"jumbotron\">
-            <h1 class=\"display-4\">Bienvenue au Bistrot</h1>
-            <p class=\"lead\">Retrouvez toutes vos recettes préférées !</p>
-            <hr class=\"my-4\">
-            <p>Rendez-vous sur la page d'inscription pour ajouter vos recettes.</p>
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Inscription</a>
+        <div class=\"card border-dark mb-3\">
+            <h1 class=\"card-header\">Bienvenue au Bistrot</h1>
+            <h4 class=\"card-title mt-4\">Retrouvez toutes vos recettes préférées chez nous !</h4>
         </div>
     </div>
+    
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -128,14 +126,12 @@ class __TwigTemplate_a36ee51e1841fb58ff6d98cbea9a2e15db496be7dda351f2da5ba190d15
 
 {% block body %}
     <div class='container mt-4'>
-        <div class=\"jumbotron\">
-            <h1 class=\"display-4\">Bienvenue au Bistrot</h1>
-            <p class=\"lead\">Retrouvez toutes vos recettes préférées !</p>
-            <hr class=\"my-4\">
-            <p>Rendez-vous sur la page d'inscription pour ajouter vos recettes.</p>
-            <a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">Inscription</a>
+        <div class=\"card border-dark mb-3\">
+            <h1 class=\"card-header\">Bienvenue au Bistrot</h1>
+            <h4 class=\"card-title mt-4\">Retrouvez toutes vos recettes préférées chez nous !</h4>
         </div>
     </div>
+    
 {% endblock %}
 ", "pages/home.html.twig", "/Users/julia/Documents/MenuDiamontis/menudiamontis/templates/pages/home.html.twig");
     }
