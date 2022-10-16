@@ -1,0 +1,59 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bistrot - Menu{% endblock %}
+
+{% block body %}
+    <div class='container mt-4'>
+        {% if not menus.items is same as ([]) %}
+        <h1>Menu</h1>
+
+            <a href="{{ path('menu.new') }}" class="btn btn-primary mb-3 mt-4">Ajouter une recette</a>
+
+                {% for message in app.flashes('success') %}
+                    <div class='alert alert-success mt-4'>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+            <div class='count mt-4'>
+                <h4>Il y a {{ menus.getTotalItemCount }} recettes au total.</h4>
+            </div>
+
+        <table class="table mt-4">
+            <thead>
+                <tr>
+                <th scope="col">Numéro</th>
+                <th scope="col">Nom</th>
+                <th scope="col">Prix</th>
+                <th scope="col">Description</th>
+                <th scope="col">Date de création</th>
+                <th scope="col">Edition</th>
+                <th scope="col">Suppression</th>
+                </tr>
+            </thead>
+            <tbody>
+                    {% for menu in menus %}
+                        <tr>
+                        <th scope="row">{{ menu.id }}</th>
+                        <td>{{ menu.name }}</td>
+                        <td>{{ menu.price }}</td>
+                        <td>{{ menu.description }}</td>
+                        <td>{{ menu.createdAt|date('d/m/Y') }}</td>
+                        <td>
+                            <a href="{{ path('menu.edit', {'id': menu.id}) }}" class="btn btn-info">Editer</a>
+                        </td>
+                        <td>
+                            <a href="{{ path('menu.delete', {'id': menu.id}) }}" class="btn btn-danger">Supprimer</a>
+                        </td>
+                        </tr>
+                    {% endfor %}
+            </tbody>
+        </table>
+        <div class="navigation d-flex justify-content-center mt-4">
+            {{ knp_pagination_render(menus) }}
+        </div>
+        {% else %}
+            <h1>Il n'y a pas de recettes.</h1>
+        {% endif %}
+    </div>
+{% endblock %}

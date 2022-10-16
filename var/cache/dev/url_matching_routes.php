@@ -16,6 +16,8 @@ return [
         '/' => [[['_route' => 'home.index', '_controller' => 'App\\Controller\\HomeController::index'], null, ['GET' => 0], null, false, false, null]],
         '/ingredient' => [[['_route' => 'ingredient.index', '_controller' => 'App\\Controller\\IngredientController::index'], null, ['GET' => 0], null, false, false, null]],
         '/ingredient/nouveau' => [[['_route' => 'ingredient.new', '_controller' => 'App\\Controller\\IngredientController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/menu' => [[['_route' => 'menu.index', '_controller' => 'App\\Controller\\MenuController::index'], null, ['GET' => 0], null, false, false, null]],
+        '/menu/creation' => [[['_route' => 'menu.new', '_controller' => 'App\\Controller\\MenuController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -38,6 +40,10 @@ return [
                     .'|edition/([^/]++)(*:200)'
                     .'|suppression/([^/]++)(*:228)'
                 .')'
+                .'|/menu/(?'
+                    .'|edition/([^/]++)(*:262)'
+                    .'|suppression/([^/]++)(*:290)'
+                .')'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -49,8 +55,10 @@ return [
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
         200 => [[['_route' => 'ingredient.edit', '_controller' => 'App\\Controller\\IngredientController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
-        228 => [
-            [['_route' => 'ingredient.delete', '_controller' => 'App\\Controller\\IngredientController::delete'], ['id'], ['GET' => 0], null, false, true, null],
+        228 => [[['_route' => 'ingredient.delete', '_controller' => 'App\\Controller\\IngredientController::delete'], ['id'], ['GET' => 0], null, false, true, null]],
+        262 => [[['_route' => 'menu.edit', '_controller' => 'App\\Controller\\MenuController::edit'], ['id'], ['GET' => 0, 'POST' => 1], null, false, true, null]],
+        290 => [
+            [['_route' => 'menu.delete', '_controller' => 'App\\Controller\\MenuController::delete'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

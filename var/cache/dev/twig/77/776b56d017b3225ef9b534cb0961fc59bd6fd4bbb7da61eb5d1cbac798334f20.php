@@ -54,6 +54,12 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"";
         // line 13
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("menu.index");
+        echo "\">Menu <span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"";
+        // line 16
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ingredient.index");
         echo "\">Ingrédients <span class=\"sr-only\">(current)</span></a>
       </li>
@@ -80,7 +86,7 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
 
     public function getDebugInfo()
     {
-        return array (  57 => 13,  43 => 1,);
+        return array (  63 => 16,  57 => 13,  43 => 1,);
     }
 
     public function getSourceContext()
@@ -95,6 +101,9 @@ class __TwigTemplate_5c4453d905f381e7937df89f6528d461175693ac971d80ad07da2935f91
     <ul class=\"navbar-nav mr-auto\">
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"#\">Accueil <span class=\"sr-only\">(current)</span></a>
+      </li>
+      <li class=\"nav-item active\">
+        <a class=\"nav-link\" href=\"{{ path('menu.index') }}\">Menu <span class=\"sr-only\">(current)</span></a>
       </li>
       <li class=\"nav-item active\">
         <a class=\"nav-link\" href=\"{{ path('ingredient.index') }}\">Ingrédients <span class=\"sr-only\">(current)</span></a>
