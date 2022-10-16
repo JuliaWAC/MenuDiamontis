@@ -21,13 +21,15 @@
 
             {% for menu in menus %}
                 <div class="card text-center mt-5">
-                    <div class="card-header">{{menu.id}}</div>
                     <div class="card-body">
                         <h5 class="card-title">{{menu.name}}</h5>
-                        <p class="card-text">{{menu.price}}</p>
+                        <p class="card-text">{{menu.price}} €</p>
                         <p class="card-text">{{menu.description}}</p>
                     </div>
-                    <div class="card-footer text-muted">{{ menu.createdAt|date('d/m/Y') }}</div>
+                    <div class="card-footer text-muted">
+                        <a href="{{ path('menu.edit', {'id': menu.id}) }}" class="btn btn-primary">Modifier</a>
+                        <a href="{{ path('menu.delete', {'id': menu.id}) }}" class="btn btn-danger">Supprimer</a>
+                    </div>
                 </div>
             {% endfor %}
         {# <table class="table mt-4">
